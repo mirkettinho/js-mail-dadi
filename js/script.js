@@ -29,3 +29,26 @@ if (userEmail === ""){
 }
 
 // DADI
+
+const pc = [1,2,3,4,5,6];
+const human = [1,2,3,4,5,6]
+
+let randomNumberPc = Math.floor(Math.random()*pc.length + 1);
+
+
+let randomNumberHuman = Math.floor(Math.random()*human.length + 1 );
+
+console.log("pc " + randomNumberPc)
+console.log("player " + randomNumberHuman)
+
+if (randomNumberPc === randomNumberHuman){
+  console.log("pareggio")
+}
+
+if (randomNumberPc > randomNumberHuman){
+  console.log("il vincitore è il pc")
+}
+
+if (randomNumberPc < randomNumberHuman){
+  console.log("il vincitore è l'umano")
+}
