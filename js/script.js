@@ -1,6 +1,5 @@
 // EMAIL
-
-const userEmail = prompt("inserisci la tua email", "mirko@gmail.com")
+const userEmail = document.getElementById("email-form")
 const validEmail = [
   "mirkettinho@gmail.com", 
   "mirko@gmail.com", 
@@ -9,64 +8,38 @@ const validEmail = [
 ];
 
 const banEmail = ["sonobannato.com", "sonobannato.it"]
-
-
+let esito = document.getElementById("esito")
 
 console.log(userEmail, validEmail, banEmail )
 
-if (userEmail === ""){
-  alert("compila il prompt")
+const accedi = document.querySelector(".accedi")
+
+accedi.addEventListener("click", function(){
+
+  console.log(accedi)
+
+if (userEmail.value === ""){
+  esito.innerHTML = `compila il form`
+  esito.classList.add("orange")
   console.log("il prompt è vuoto")
-}else if(validEmail.includes(userEmail)){
-  alert("verifica superata, sarai indirizzato alla pagina www.prova.com tra 5secondi.")
+
+}else if(validEmail.includes(userEmail.value)){
+  esito.innerHTML = `verifica superata.`
+  esito.classList.add("green")
+  let link = document.getElementById("link")
+  document.getElementById("link").classList.remove("hide");
   console.log("verifica superata")
-} else if (banEmail.includes(userEmail)){
-    alert("impossibile accedere, la sua email è nella blacklist")
+
+} else if (banEmail.includes(userEmail.value)){
+  esito.innerHTML = `impossibile accedere, la sua email è nella blacklist`
+  esito.classList.add("red")
     console.log("utente bannato")
-}else if(!(validEmail.includes(userEmail))){
-  alert("utente non registrato")
+
+}else if(!(validEmail.includes(userEmail.value))){
+  esito.innerHTML = `utente non registrato`
   console.log("verifica non superata")
 }
+} )
 
-// DADI
-
-const pc = [1,2,3,4,5,6];
-const human = [1,2,3,4,5,6]
-
-
-let risultato = document.querySelector(".risultato")
-console.log(risultato)
-
-let redCorner = document.querySelector(".red")
-
-let blueCorner = document.querySelector(".blue")
-
-
-let randomNumberPc = Math.floor(Math.random()*pc.length + 1);
-blueCorner.innerHTML = randomNumberPc
-
-
-
-let randomNumberHuman = Math.floor(Math.random()*human.length + 1 );
-redCorner.innerHTML = randomNumberHuman
-
-
-console.log("pc " + randomNumberPc)
-console.log("player " + randomNumberHuman)
-
-if (randomNumberPc === randomNumberHuman){
-  console.log("pareggio")
-  risultato.innerHTML = `NULLA`
-}
-
-if (randomNumberPc > randomNumberHuman){
-  console.log("il vincitore è il pc")
-  risultato.innerHTML = `PC`
-}
-
-if (randomNumberPc < randomNumberHuman){
-  console.log("il vincitore è l'umano")
-  risultato.innerHTML = `UMANO`
-}
 
 

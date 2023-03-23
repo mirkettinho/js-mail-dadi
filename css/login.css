@@ -1,0 +1,120 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-image: url(../img/dice.jpg);
+  background-size: cover;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container{
+  width: 1000px;
+  margin: 100px auto;
+  /* background-color: red;DEBUG */
+  display: flex;
+  justify-content: end;
+  
+}
+
+d-flex{
+  display: flex;
+}
+
+.box{
+  height: 400px;
+  width: 400px;
+  background-color: rgba(137, 43, 226, 0.336);
+  border-radius: 30px;
+}
+
+img{
+  width: 30%;
+  
+}
+
+.top{
+  /* background-color: aqua;DEBUG */
+  height: 100px;
+  width: 100%;
+  text-align: center;
+}
+
+.bottom{
+  /* background-color: beige;DEBUG */
+  text-align: center;
+  
+  
+}
+
+input{
+  height: 30px;
+  border-radius: 10px;
+  border: 2px solid rgba(23, 4, 41, 0.603);
+  padding: 0px 10px;
+  background-color: rgba(137, 43, 226, 0.336);
+  margin-bottom: 20px;
+}
+
+::placeholder{
+  color: white;
+}
+
+button{
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: blueviolet;
+  border: none;
+  margin-bottom: 20px;
+}
+
+
+button:hover{
+  background-color: rgb(149, 66, 226);
+  cursor: pointer;
+}
+
+h5{
+  font-size: 1.5rem;
+}
+.green{
+  color: green;
+}
+
+.orange{
+  color: orange;
+}
+
+.red{
+  color: red;
+}
+
+a{
+  color: black;
+  font-size: 1.5rem;
+  padding: 10px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: blueviolet;
+  
+}
+
+a:hover{
+  background-color: rgb(149, 66, 226);
+}
+
+.hide{
+  display: none;
+}
+
+.block{
+  display: block;
+}
+
+#esito{
+  margin-top: 20px;
+}
