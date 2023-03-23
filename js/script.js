@@ -33,6 +33,7 @@ if (userEmail === ""){
 const pc = [1,2,3,4,5,6];
 const human = [1,2,3,4,5,6]
 
+
 let risultato = document.querySelector(".risultato")
 console.log(risultato)
 
